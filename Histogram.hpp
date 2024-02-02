@@ -37,11 +37,15 @@ namespace ASCIIgram
      */
     Histogram(const std::vector<int> &dataset, const int maxBins);
 
-    /** Get the histogram in string format
+    /** Return a string representation of the histogram.
      *
-     * @return The histogram in ASCII format
+     * @param unit Optional unit of the histogram values (e.g. "ms")
+     * @param marker The character to use for the histogram bars ('*' by default)
+     * @param fieldWidth The width of the field for the bin values (3 by default = 3-digit numbers)
+     * @param barScale The scale of the histogram bars (100 by default = 1 symbol per 0.01 of the total count)
+     * @return A string representation of the histogram
      */
-    std::string toString() const;
+    std::string toString(std::string unit = "", char marker = '*', int fieldWidth = 3, int barScale = 100) const;
 
     /** Get the maximum number of bins specified by the user
      *

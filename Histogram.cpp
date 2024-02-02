@@ -55,7 +55,8 @@ namespace ASCIIgram
         }
     }
 
-    std::string Histogram::toString() const
+    std::string Histogram::toString(std::string unit, char marker, int fieldWidth,
+                                    int barScale) const
     {
         // create output stream
         std::stringstream sout;
@@ -63,12 +64,6 @@ namespace ASCIIgram
         sout << std::setprecision(2) << std::fixed;
         // sum of all latencies, needed for normalization
         const int totalLatencies = std::accumulate(m_bins.begin(), m_bins.end(), 0);
-
-        // Histogram settings
-        const int barScale = 100; // scale for the bar, 1 symbol per 0.01
-        std::string unit = "ms";  // unit to use for the bins
-        char barSymbol = '*';     // symbol to use for the bar
-        int fieldWidth = 3;       // set width to 3, accomodate 3 digit numbers
 
         for (int i = 0; i < m_nBins; ++i)
         {
@@ -98,7 +93,7 @@ namespace ASCIIgram
             sout << normalizedBinCount << ") | ";
 
             // draw the bar symbol barLength times
-            sout << std::string(barLength, barSymbol) + "\n";
+            sout << std::string(barLength, marker) + "\n";
         }
         return sout.str();
     }
