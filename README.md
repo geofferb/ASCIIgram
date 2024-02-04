@@ -1,6 +1,6 @@
 # ASCIIgram
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/licence-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ASCIIgram is a simple C++ library for creating normalized ASCII histograms strings from a vector of integer data.
 
