@@ -1,4 +1,4 @@
-#include "Histogram.hpp"
+#include "ASCIIgram.hpp"
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
