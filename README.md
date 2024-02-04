@@ -6,7 +6,7 @@ ASCIIgram is a simple C++ library for creating normalized ASCII histograms strin
 
 ## Installation and usage
 
-To use ASCIIgram in your C++ project, simply include `ASCIIgram.hpp`in your source code.
+To use ASCIIgram in your C++ project, simply include `ASCIIgram.hpp` in your source code.
 
 ## Features 
 * Customizable number of bins
